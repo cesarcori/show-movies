@@ -1,24 +1,35 @@
 // let mykey = "e9f611f2";
 
-let url = "http://www.omdbapi.com/?apikey=e9f611f2&t=batman";
+const myButton = document.getElementById('fetch');
+myButton.addEventListener('click', fetchInfo);
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => showData(data))
-  .catch(error => console.log(error))
+function fetchInfo() {
+
+  let searchMain = document.getElementById('search-main').value;
+  console.log(searchMain)
+
+  // let url = "http://www.omdbapi.com/?apikey=e9f611f2&s=batman";
+  let url = "http://www.omdbapi.com/?apikey=e9f611f2&s=" + searchMain;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => showData(data))
+    .catch(error => console.log(error))
+
+}
 
 let showData = (data) => {
-  console.log(data.Search[0].Title)
+  // console.log(data.Search[0])
   let body = "";
   for ( let i=0; i < data.Search.length; i++) {
 
     body += `
       
+      <img src="${data.Search[i].Poster}" />
       <div id="movie">
-        <p>Título <span class="text-result">${data.Search[i].Title}</span></p>
+        <p>Título <span class="text-title" id="title">${data.Search[i].Title}</span></p>
         <p>Año <span  class="text-result">${data.Search[i].Year}</span></p>
         <p>Tipo: <span  class="text-result">${data.Search[i].Type}</span></p>
-        <img src="${data.Search[i].Poster}" />
       </div>
     `
 

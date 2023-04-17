@@ -19,10 +19,23 @@ h1 {
   flex-wrap: wrap;
 }
 
-h2 {
-  /* text-align: center; */
+#movie {
+  display:flex;
+  justify-content: space-evenly;
+  border-bottom: solid;
+  margin: 20px;
 }
 
-#movie {
-  border-bottom: solid;
+.search {
+  display: flex;
+  justify-content: space-between;
 }
+
+img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100px;
+  height: auto;
+

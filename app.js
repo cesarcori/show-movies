@@ -26,3 +26,8 @@ let showData = (data) => {
   document.getElementById("show").innerHTML = body;
 
 }
+
+      // <tr>
+      //   <td class="name">${data[i].name.official}</td>
+      //   <td>${data[i].capital}</td>
+      //   <td>${data[i].continents}</td>

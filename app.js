@@ -28,7 +28,25 @@ let showData = (data) => {
 
 }
 
-      // <tr>
-      //   <td class="name">${data[i].name.official}</td>
-      //   <td>${data[i].capital}</td>
-      //   <td>${data[i].continents}</td>
+// console.log(document.querySelectorAll("span.text-title"));
+
+const searchTitle= document.getElementById("search-title");
+
+searchTitle.addEventListener ('keyup', event => {
+  // let currentValue = event.target.value.toLowerCase();
+  let currentValue = event.target.value.toLowerCase();
+  let movies = document.querySelectorAll("span.text-title");
+
+  movies.forEach(movie=> {
+    if (movie.textContent.toLowerCase().includes(currentValue)) {
+      movie.parentNode.parentNode.style.display = 'block';
+
+    } else {
+      movie.parentNode.parentNode.style.display = 'none';
+    }
+
+  });
+
+});
+
+

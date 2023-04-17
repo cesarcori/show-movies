@@ -16,8 +16,8 @@ let showData = (data) => {
       
       <div id="movie">
         <p>Título <span class="text-result">${data.Search[i].Title}</span></p>
-        <p>Año <span  class="text-result">1000</span></p>
-        <p>Genero: <span  class="text-result">Action, Adventure</span></p>
+        <p>Año <span  class="text-result">${data.Search[i].Year}</span></p>
+        <p>Tipo: <span  class="text-result">${data.Search[i].Type}</span></p>
       </div>
     `
 

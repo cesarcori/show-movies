@@ -25,11 +25,11 @@ let showData = (data) => {
 
     body += `
       
-      <img src="${data.Search[i].Poster}" />
       <div id="movie">
-        <p>Título <span class="text-title" id="title">${data.Search[i].Title}</span></p>
-        <p>Año <span  class="text-result">${data.Search[i].Year}</span></p>
-        <p>Tipo: <span  class="text-result">${data.Search[i].Type}</span></p>
+          <img src="${data.Search[i].Poster}" />
+          <p>Título <span class="text-title" id="title">${data.Search[i].Title}</span></p>
+          <p>Año <span  class="text-result">${data.Search[i].Year}</span></p>
+          <p>Tipo: <span  class="text-result">${data.Search[i].Type}</span></p>
       </div>
     `
 
